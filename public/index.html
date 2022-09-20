@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="https://i.postimg.cc/QNnkrs1S/icons8-calculator-26.png" type="image/png">
+    <title>Binary Calculator</title>
+  </head>
+  <body translate="no" style="background: pink;">
+    <div class="container">
+      <div class="calc">
+        <div class="header">
+          <div class="titles">Binary Calculator</div>
+        </div>
+        <div class="display">
+          <div class="display-indicate">max</div>
+          <div class="display-main" id="res" max-length="10">0</div>
+
+          <div class="display-operations" id="op">0</div>
+        </div>
+
+        <div class="row">
+          <button class="button ac" onclick="cl()">ac</button>
+          <button class="button ce" onclick="ce()">ce</button>
+          <button class="button div" onclick="key('%')">%</button>
+          <button class="button mult" onclick="key('*')">x</button>
+        </div>
+
+        <div class="row f-prop">
+          <button class="button convert-btn" style="flex-grow: 1" onclick="bin2dec()">Decimal</button>
+          <button class="button minus" onclick="key('-')">−</button>
+        </div>
+
+        <div class="row f-prop">
+          <button class="button convert-btn" style="flex-grow: 1" onclick="bin2oct()">Octal</button>
+          <button class="button plus" onclick="key('+')">+</button>
+        </div>
+
+        <div class="bottom-row">
+          <div class="left">
+            <div class="row f-prop">
+              <button class="button convert-btn" style="flex-grow: 1" onclick="bin2hex()">Hexadecimal</button>
+            </div>
+
+            <div class="row">
+              <button class="button zero" onclick="key('0')">0</button>
+              <button class="button one" onclick="key('1')">1</button>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="button eq" onclick="operatorFunx()">=</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips">
+        <div class="title">The keyboard is supported.</div>
+        <div class="hint small">If it doesn't work, click on the page.</div>
+        <div class="hint">
+          For All Clean <span class="hint-sel">AC</span> use
+          <span class="hint-btn">Delete</span> button.
+        </div>
+        <div class="hint">
+          For Cancel Entry <span class="hint-sel">CE</span> use
+          <span class="hint-btn">End</span> button.
+        </div>
+      </div>
+    </div>
+
+    <audio id="myAudio">
+        <source src="./warning.mp3" type="audio/mp3">
+      </audio>
+    <script src="./index.js"></script>
+  </body>
+</html>
