@@ -42,11 +42,11 @@ function operatorFunx() {
     var y = parseInt(numbers[1], 2);
     var div = x / y;
     var ans = div.toString(2);
-  } else if (screen.indexOf("%") != -1) {
-    var numbers = screen.split("%");
+  } else if (screen.indexOf("/") != -1) {
+    var numbers = screen.split("/");
     var x = parseInt(numbers[0], 2);
     var y = parseInt(numbers[1], 2);
-    var rem = x % y;
+    var rem = x / y;
     var ans = rem.toString(2);
   }
   screen = ans;
